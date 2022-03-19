@@ -7,6 +7,8 @@
 /**
  *
  * @author Paqui Elena
+ * @version 1.1Carmen
+ * @since 19/03/2022
  */
 public class Vivienda 
 {
@@ -101,6 +103,15 @@ public class Vivienda
     private String estado;
     private String propietario;
 
+    /**
+     * Este es el método contructor dados unos valores
+     * @param precio introdudimos el precio
+     * @param numHabitaciones introducimos el nº de habitaciones
+     * @param superficie introduce la superficie de la vivienda
+     * @param parking intruduce true o false para indicar si tiene parking
+     * @param estado indica el estado de la vivienda
+     * @param propietario indica el propietario
+     */    
     public Vivienda(double precio, int numHabitaciones, double superficie, boolean parking, String estado, String propietario) {
         this.precio = precio;
         this.numHabitaciones = numHabitaciones;
@@ -110,6 +121,9 @@ public class Vivienda
         this.propietario = propietario;
     }
     
+    /**
+     * @param precio the vivienda to set
+     */    
     public Vivienda (double precio)
     {
         this.precio = precio;
@@ -119,7 +133,10 @@ public class Vivienda
     {
         actualizarPrecio(0);
     }
-
+    
+    /**
+     * Este método actualiza el precio dado un descuento indicado
+     */    
     public void actualizarPrecio(Object descuento) {
         setPrecio(getPrecio() - getPrecio() * 0.05);
     }
